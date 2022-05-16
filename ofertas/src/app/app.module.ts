@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { PagesModule } from './views/pages/pages.module'
@@ -11,6 +12,7 @@ import { AppRoutingModule } from './views/pages/app-routing.module'
   imports: [
     AppRoutingModule,
     BrowserModule,
+    HttpClientModule,
     PagesModule
   ],
   providers: [],
