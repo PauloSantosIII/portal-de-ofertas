@@ -1,0 +1,64 @@
+div.card-body {
+  position: relative;
+  top: 52px;
+  width: 80vw;
+  margin: 0 10vw;
+  font-family: 'Architects Daughter', cursive;
+  display: flex;
+}
+
+div.credit-card {
+  border-right: 1px solid black;
+
+  margin-top: 100px;
+  width: 45vw;
+  height: 400px;
+
+  form {
+    margin-top: 60px;
+    width: 30vw;
+    display: flex;
+    flex-wrap: wrap;
+
+    input {
+      margin-bottom: 30px;
+    }
+
+    input#validade {
+      width: 14vw;
+    }
+
+    input#seguranca {
+      width: 14vw;
+      margin-left: 2vw;
+    }
+
+    button {
+      width: 30vw;
+    }
+  }
+}
+
+div.checkout {
+  margin-top: 100px;
+  margin-left: 100px;
+  width: 35vw;
+  height: 400px;
+
+  span {
+    width: 35vw;
+  }
+}
+
+div.resumo {
+  margin-top: 100px;
+  text-align: center;
+  margin-left: 100px;
+}
+
+div.somatorio {
+  margin-top: 100px;
+  margin-left: 100px;
+  text-align: center;
+  border-top: 1px solid grey;
+}

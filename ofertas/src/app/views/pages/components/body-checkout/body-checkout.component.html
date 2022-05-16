@@ -1,0 +1,62 @@
+<app-header></app-header>
+<div class="card-body">
+  <div class="credit-card">
+    <h5><strong>Pagamento</strong></h5>
+    <form [formGroup]="creditCardForm" (ngSubmit)="payment()">
+      <input 
+        class="form-control" 
+        type="text"
+        formControlName="numero"
+        placeholder="Cartão"
+        aria-label="cartão de crédito"
+        mask="0000 0000 0000 0000"
+        minlength="16"
+        maxlength="16"
+      />
+      <input 
+        class="form-control" 
+        type="text"
+        formControlName="nome"
+        placeholder="Nome impresso"
+        aria-label="nome"
+      />
+      <input 
+        class="form-control" 
+        type="text"
+        formControlName="validade"
+        placeholder="Validade"
+        aria-label="validade"
+        mask="00/00"
+        id="validade"
+        minlength="4"
+        maxlength="4"
+      />
+      <input 
+        class="form-control" 
+        type="text"
+        formControlName="codigo"
+        placeholder="Cód. Segurança"
+        aria-label="codigo seguranca"
+        id="seguranca"
+        mask="000"
+        minlength="3"
+        maxlength="3"
+      />
+      <button 
+        class="btn btn-outline-dark"
+        type="button"
+        (click)="payment()"
+      >Pagar agora!</button>
+    </form>
+  </div>
+  <div class="checkout">
+    <h5><strong>Resumo da compra</strong></h5>
+    <div class="resumo">
+      <span>{{ quantidade }}</span> x <span>{{ produto }}</span><br>
+      <span>{{ unitario | currency:'BRL' }}</span>
+    </div>
+    <div class="somatorio">
+      <span>{{ quantidade * unitario | currency:'BRL' }}</span>
+    </div>
+  </div>
+</div>
