@@ -14,4 +14,8 @@ export class OfertasService {
     return this.http.get<Observable<any>>(this.url + '/ofertas')
   }
 
+  getProduct(id: number): Observable<any> {
+    return this.http.get<Observable<any>>(this.url + '/ofertas/' + id)
+  }
+
 }
