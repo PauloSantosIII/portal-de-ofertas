@@ -1,18 +1,23 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { PagesComponent } from './pages.component'
 import { BodyHomeComponent } from './components/body-home/body-home.component'
 import { HeaderComponent } from './components/header/header.component'
+import { BodyCheckoutComponent } from './components/body-checkout/body-checkout.component'
+import { BodyProductComponent } from './components/body-product/body-product.component'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  exports: [PagesComponent],
+  exports: [],
   declarations: [
+    BodyCheckoutComponent,
     BodyHomeComponent,
-    HeaderComponent,
-    PagesComponent
+    BodyProductComponent,
+    HeaderComponent
   ]
 })
 export class PagesModule { }

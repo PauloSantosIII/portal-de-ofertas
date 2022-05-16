@@ -12,6 +12,7 @@ div.oferta {
   margin: 0 1vw;
   margin-bottom: 20px;
   border: none;
+  cursor: pointer;
 
   div.card {
     border: none;
@@ -21,7 +22,7 @@ div.oferta {
       font-size: small;
     }
 
-    a {
+    button {
       margin: 5px 15px;
     }
   }

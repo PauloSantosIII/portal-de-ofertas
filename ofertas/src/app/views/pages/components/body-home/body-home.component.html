@@ -1,43 +1,44 @@
+<app-header></app-header>
 <div class="card-body">
   <div class="row">
     <h4><strong>Hoteis</strong></h4>
   </div>
-  <div class="d-inline-block"  *ngFor="let hotel of hotelList; let i = index">
+  <div class="d-inline-block"  *ngFor="let item of hotelList; let i = index">
     <div class="card oferta">
-      <img src="https://picsum.photos/80/50" class="card-img-top" alt="...">
+      <img src="https://picsum.photos/80/50" class="card-img-top" alt="{{ item.i }}" (click)="goTo(item.id)">
       <div class="card">
-        <h6 class="card-title"><strong>{{ hotel.titulo }}</strong></h6>
-        <p class="card-text">{{ hotel.descricaoBreve }}</p>
-        <p class="card-text">R$ {{ hotel.valor }}</p>
-        <a href="/product" class="btn btn-dark btn-sm">Comprar</a>
+        <h6 class="card-title" (click)="goTo(item.id)"><strong>{{ item.titulo }}</strong></h6>
+        <p class="card-text" (click)="goTo(item.id)">{{ item.descricaoBreve }}</p>
+        <p class="card-text" (click)="goTo(item.id)">R$ {{ item.valor | currency:'BRL' }}</p>
+        <button class="btn btn-dark btn-sm"  (click)="buyTo(item)">Comprar</button>
       </div>
     </div>
   </div>
   <div class="row">
     <h4><strong>Gastronomia</strong></h4>
   </div>
-  <div class="d-inline-block"  *ngFor="let restaurante of restauranteList; let i = index">
+  <div class="d-inline-block"  *ngFor="let item of restauranteList; let i = index">
     <div class="card oferta">
-      <img src="https://picsum.photos/80/50" class="card-img-top" alt="...">
+      <img src="https://picsum.photos/80/50" class="card-img-top" alt="{{ item.i }}" (click)="goTo(item.id)">
       <div class="card">
-        <h6 class="card-title"><strong>{{ restaurante.titulo }}</strong></h6>
-        <p class="card-text">{{ restaurante.descricaoBreve }}</p>
-        <p class="card-text">R$ {{ restaurante.valor }}</p>
-        <a href="/product" class="btn btn-dark btn-sm">Comprar</a>
+        <h6 class="card-title" (click)="goTo(item.id)"><strong>{{ item.titulo }}</strong></h6>
+        <p class="card-text" (click)="goTo(item.id)">{{ item.descricaoBreve }}</p>
+        <p class="card-text" (click)="goTo(item.id)">R$ {{ item.valor | currency:'BRL' }}</p>
+        <button class="btn btn-dark btn-sm"  (click)="buyTo(item)">Comprar</button>
       </div>
     </div>
   </div>
   <div class="row">
     <h4><strong>Entretenimento</strong></h4>
   </div>
-  <div class="d-inline-block"  *ngFor="let entretenimento of entretenimentoList; let i = index">
+  <div class="d-inline-block"  *ngFor="let item of entretenimentoList; let i = index">
     <div class="card oferta">
-      <img src="https://picsum.photos/80/50" class="card-img-top" alt="...">
+      <img src="https://picsum.photos/80/50" class="card-img-top" alt="{{ item.i }}" (click)="goTo(item.id)">
       <div class="card">
-        <h6 class="card-title"><strong>{{ entretenimento.titulo }}</strong></h6>
-        <p class="card-text">{{ entretenimento.descricaoBreve }}</p>
-        <p class="card-text">R$ {{ entretenimento.valor }}</p>
-        <a href="/product" class="btn btn-dark btn-sm">Comprar</a>
+        <h6 class="card-title" (click)="goTo(item.id)"><strong>{{ item.titulo }}</strong></h6>
+        <p class="card-text" (click)="goTo(item.id)">{{ item.descricaoBreve }}</p>
+        <p class="card-text" (click)="goTo(item.id)">R$ {{ item.valor | currency:'BRL' }}</p>
+        <button class="btn btn-dark btn-sm"  (click)="buyTo(item)">Comprar</button>
       </div>
     </div>
   </div>

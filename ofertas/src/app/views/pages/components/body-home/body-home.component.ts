@@ -1,5 +1,6 @@
 import { OfertasService } from 'src/app/core/services/ofertas.service'
 import { Component, OnInit } from '@angular/core'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-body-home',
@@ -12,7 +13,10 @@ export class BodyHomeComponent implements OnInit {
   restauranteList: any[] = []
   entretenimentoList: any[] = []
 
-  constructor(private ofertasService: OfertasService) { }
+  constructor(
+    private router: Router,
+    private ofertasService: OfertasService
+  ) { }
 
   ngOnInit() {
     this.getList()
@@ -33,6 +37,16 @@ export class BodyHomeComponent implements OnInit {
         })
       }
     })
+  }
+
+  goTo(id: number) {
+    if (id !== null && id !== 0) {
+      this.router.navigate(['/product/' + id])
+    }
+  }
+
+  buyTo(item: any) {
+    this.router.navigate(['/checkout', item])
   }
 
 }
