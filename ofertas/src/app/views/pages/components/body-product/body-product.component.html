@@ -1,0 +1,37 @@
+<app-header></app-header>
+<div class="card-body">
+  <div class="product">
+    <div class="images">
+      <img src="https://picsum.photos/300/200" alt="destaque">
+      <div class="smalls">
+        <img src="https://picsum.photos/100/60" alt="des1">
+        <img src="https://picsum.photos/100/60" alt="des2">
+        <img src="https://picsum.photos/100/60" alt="des3">
+      </div>
+    </div>
+    <div class="description">
+      <div class="card">
+        <h5 class="card-title"><strong>{{ product.titulo }}</strong></h5>
+        <p class="card-text">{{ product.descricaoBreve }}</p>
+        <h5 class="card-text">
+          <strong>R$ {{ product.valor | currency:'BRL' }}</strong>
+        </h5>
+        <button class="btn btn-dark btn-sm" (click)="buyTo(product)">Comprar</button>
+      </div>
+    </div>
+  </div>
+  <div class="details">
+    <h6><strong>Detalhes da oferta</strong></h6>
+    <div class="detalhes" *ngFor="let detalhe of product.detalhes; let i = index">
+      <ul>
+        <li>{{ detalhe }}</li>
+      </ul>
+    </div>
+    <h6 class="card-title"><strong>Destaques da oferta</strong></h6>
+    <div class="destaques" *ngFor="let destaque of product.destaques; let i = index">
+      <ul>
+        <li>{{ destaque }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

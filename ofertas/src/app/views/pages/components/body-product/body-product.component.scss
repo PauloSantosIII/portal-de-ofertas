@@ -1,0 +1,115 @@
+div.card-body {
+  position: relative;
+  top: 52px;
+  width: 80vw;
+  margin: 0 10vw;
+  font-family: 'Architects Daughter', cursive;
+}
+
+div.product {
+  display: flex;
+}
+
+div.images {
+  width: 44vw;
+  height: 300px;
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  div.smalls {
+    width: 44vw;
+    height: 100px;
+    display: flex;
+
+    img {
+      margin: 10px 0;
+      width: 30%;
+    }
+
+    img:nth-child(2n),
+    img:nth-child(3n) {
+      margin-left: 5%;
+    }
+  }
+}
+
+div.description {
+  width: 34vw;
+  height: 300px;
+  padding: 30px 10px;
+  text-align: center;
+
+  div.card {
+    border: none;
+  }
+
+  p {
+    height: 300px;
+    margin-bottom: 20px;
+  }
+
+  a {
+    width: 100px;
+    margin: 0 auto;
+  }
+}
+
+div.details {
+  width: 80vw;
+  height: 300px;
+  margin-bottom: 20px;
+  display: inline;
+  position: relative;
+  top: 370px;
+
+  h6.card-title {
+    margin-top: 80px;
+  }
+
+  div.detalhes {
+    ul {      
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    li:nth-child(odd) {
+      float: left;
+      width: 50%;
+    }
+    
+    li::before {
+      content: "✔";
+      font-size: small;
+      padding-right: 8px;
+    }
+  }
+
+  div.destaques {
+    ul {      
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    li:nth-child(odd) {
+      float: left;
+      width: 50%;
+    }
+    
+    li::before {
+      content: "☆";
+      font-size: small;
+      padding-right: 8px;
+    }
+  }
+}
