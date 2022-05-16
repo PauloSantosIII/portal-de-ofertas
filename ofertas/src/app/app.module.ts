@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { PagesModule } from './views/pages/pages.module'
 import { AppComponent } from './app.component'
-import { AppRoutingModule } from './views/pages/app-routing.module'
+import { AppRoutingModule } from './app-routing.module'
 
 @NgModule({
   declarations: [
